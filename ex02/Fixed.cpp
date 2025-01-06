@@ -6,7 +6,7 @@
 /*   By: scraeyme <scraeyme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 13:49:37 by scraeyme          #+#    #+#             */
-/*   Updated: 2025/01/06 17:59:24 by scraeyme         ###   ########.fr       */
+/*   Updated: 2025/01/06 18:03:41 by scraeyme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,23 @@
 
 Fixed::Fixed(void)
 {
-	std::cout << "Default constructor called" << std::endl;
 	this->_value = 0;
 }
 
 Fixed::Fixed(const Fixed &copy)
 {
-	std::cout << "Copy constructor called" << std::endl;
 	this->setRawBits(copy.getRawBits());
 }
 
 Fixed &Fixed::operator=(Fixed const &obj)
 {
-	std::cout << "Copy assignment operator called" << std::endl;
-
 	this->setRawBits(obj.getRawBits());
 	return (*this);
 }
 
 Fixed::~Fixed(void)
 {
-	std::cout << "Destructor called" << std::endl;
+	
 }
 
 int	Fixed::getRawBits(void) const
@@ -49,13 +45,11 @@ void	Fixed::setRawBits(int const raw)
 
 Fixed::Fixed(const float value)
 {
-	std::cout << "Float constructor called" << std::endl;
 	this->_value = (int)roundf(value * (1 << this->_bits));
 }
 
 Fixed::Fixed(const int value)
 {
-	std::cout << "Int constructor called" << std::endl;
 	this->_value = value << this->_bits;
 }
 

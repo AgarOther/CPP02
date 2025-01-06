@@ -3,7 +3,7 @@ CC					=	c++
 CFLAGS				=	-Wall -Wextra -Werror -std=c++98
 
 # Names
-NAME				=	fixed
+NAME				=	fixed_but_worse
 
 # Sources & Includes
 SRCS				= 	main.cpp \
