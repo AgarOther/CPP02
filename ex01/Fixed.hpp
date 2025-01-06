@@ -6,7 +6,7 @@
 /*   By: scraeyme <scraeyme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 13:49:33 by scraeyme          #+#    #+#             */
-/*   Updated: 2025/01/03 16:02:48 by scraeyme         ###   ########.fr       */
+/*   Updated: 2025/01/06 17:50:58 by scraeyme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class Fixed
 
 		Fixed(const int value);
 		Fixed(const float value);
-		Fixed &operator<<(std::ostream &obj);
 
 		float toFloat(void) const;
 		int toInt(void) const;
