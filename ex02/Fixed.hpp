@@ -6,7 +6,7 @@
 /*   By: scraeyme <scraeyme@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 13:49:33 by scraeyme          #+#    #+#             */
-/*   Updated: 2025/01/06 17:50:58 by scraeyme         ###   ########.fr       */
+/*   Updated: 2025/01/08 12:21:09 by scraeyme         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,29 @@ class Fixed
 		int toInt(void) const;
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
+
+		bool operator>(Fixed const &obj);
+		bool operator<(Fixed const &obj);
+		bool operator>=(Fixed const &obj);
+		bool operator<=(Fixed const &obj);
+		bool operator==(Fixed const &obj);
+		bool operator!=(Fixed const &obj);
+
+		Fixed operator+(Fixed const &obj);
+		Fixed operator-(Fixed const &obj);
+		Fixed operator*(Fixed const &obj);
+		Fixed operator/(Fixed const &obj);
+
+		Fixed operator++(int);
+		const Fixed &operator++();
+		Fixed operator--(int);
+		const Fixed &operator--();
+
+		static Fixed &max(Fixed &v1, Fixed &v2);
+		static Fixed &min(Fixed &v1, Fixed &v2);
+
+		static const Fixed &max(Fixed const &v1, Fixed const &v2);
+		static const Fixed &min(Fixed const &v1, Fixed const &v2);
 };
 
 std::ostream &operator<<(std::ostream &os, Fixed const &obj);
